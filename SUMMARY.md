@@ -7,5 +7,5 @@
   * [icp](icp.md)
   * [RANSAC](ransac.md)
 * [Thesis](thesis.md)
-  * 3D Mapping with an RGB-D Camera（RGBD SLAM V2 ）
+  * [3D Mapping with an RGB-D Camera（RGBD SLAM V2 ）](thesis/3d-mapping-with-an-rgb-d-camerargbd-slam-v2.md)
 
