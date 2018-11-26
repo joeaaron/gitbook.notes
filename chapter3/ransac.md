@@ -1,4 +1,4 @@
-  RANSAC是“RANdom SAmple Consensus（随机抽样一致）”的缩写。它可以从一组包含“局外点”的观测数据集中，通过迭代方式估计数学模型的参数。它是一种不确定的算法——它有一定的概率得出一个合理的结果；为了提高概率必须提高迭代次数。该算法最早由Fischler和Bolles于1981年提出。  
+RANSAC是“RANdom SAmple Consensus（随机抽样一致）”的缩写。它可以从一组包含“局外点”的观测数据集中，通过迭代方式估计数学模型的参数。它是一种不确定的算法——它有一定的概率得出一个合理的结果；为了提高概率必须提高迭代次数。该算法最早由Fischler和Bolles于1981年提出。  
     RANSAC的基本假设是：  
 （1）数据由“局内点”组成，例如：数据的分布可以用一些模型参数来解释；  
 （2）“局外点”是不能适应该模型的数据；  
@@ -93,17 +93,63 @@ while \( iterations &lt; k \)
 **六、应用**  
     RANSAC算法经常用于计算机视觉，例如同时求解相关问题与估计立体摄像机的基础矩阵。
 
+  
+**七、参考文献**
 
+* Martin A. Fischler and Robert C. Bolles \(June 1981\). "Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography".
+  Comm. of the ACM
+  **24**
+  : 381–395.
+  [doi](http://en.wikipedia.org/wiki/Digital_object_identifier)
+  :
+  [10.1145/358669.358692](http://dx.doi.org/10.1145%2F358669.358692)
+  .
+* David A. Forsyth and Jean Ponce \(2003\).
+  Computer Vision, a modern approach
+  . Prentice Hall.
+  [ISBN](http://en.wikipedia.org/wiki/International_Standard_Book_Number)
+  [0-13-085198-1](http://en.wikipedia.org/wiki/Special:BookSources/0-13-085198-1)
+  .
+* Richard Hartley and
+  [Andrew Zisserman](http://en.wikipedia.org/wiki/Andrew_Zisserman)
+  \(2003\).
+  Multiple View Geometry in Computer Vision
+  \(2nd ed.\). Cambridge University Press.
+* P.H.S. Torr and D.W. Murray \(1997\). "The Development and Comparison of Robust Methods for Estimating the Fundamental Matrix".
+  International Journal of Computer Vision
+  **24**
+  : 271–300.
+  [doi](http://en.wikipedia.org/wiki/Digital_object_identifier)
+  :
+  [10.1023/A:1007927408552](http://dx.doi.org/10.1023%2FA%3A1007927408552)
+  .
+* Ondrej Chum \(2005\).
+  ["Two-View Geometry Estimation by Random Sample and Consensus"](http://cmp.felk.cvut.cz/~chum/Teze/Chum-PhD.pdf)
+  .
+  PhD Thesis
+  .
+  [http://cmp.felk.cvut.cz/~chum/Teze/Chum-PhD.pdf](http://cmp.felk.cvut.cz/~chum/Teze/Chum-PhD.pdf)
+* Sunglok Choi, Taemin Kim, and Wonpil Yu \(2009\).
+  ["Performance Evaluation of RANSAC Family"](http://www.bmva.org/bmvc/2009/Papers/Paper355/Paper355.pdf)
+  .
+  In Proceedings of the British Machine Vision Conference \(BMVC\)
+  .
+  [http://www.bmva.org/bmvc/2009/Papers/Paper355/Paper355.pdf](http://www.bmva.org/bmvc/2009/Papers/Paper355/Paper355.pdf)
+  .
 
-**七、外部链接**
+**八、外部链接**
 
-* [RANSAC Toolbox for MATLAB](http://vision.ece.ucsb.edu/~zuliani/Code/Code.html). A research \(and didactic\) oriented toolbox to explore the RANSAC algorithm in
-  [MATLAB](http://en.wikipedia.org/wiki/MATLAB)  It is highly configurable and contains the routines to solve a few relevant estimation problems.
-* [Implementation in C++](http://www.mrpt.org/RANSAC_C++_examples)  as a generic template.
-* [RANSAC for Dummies](http://vision.ece.ucsb.edu/~zuliani/Research/RANSAC/docs/RANSAC4Dummies.pdf)  A simple tutorial with many examples that uses the RANSAC Toolbox for MATLAB.
+* [RANSAC Toolbox for MATLAB](http://vision.ece.ucsb.edu/~zuliani/Code/Code.html)
+  . A research \(and didactic\) oriented toolbox to explore the RANSAC algorithm in
+  [MATLAB](http://en.wikipedia.org/wiki/MATLAB)
+  . It is highly configurable and contains the routines to solve a few relevant estimation problems.
+* [Implementation in C++](http://www.mrpt.org/RANSAC_C++_examples)
+  as a generic template.
+* [RANSAC for Dummies](http://vision.ece.ucsb.edu/~zuliani/Research/RANSAC/docs/RANSAC4Dummies.pdf)
+  A simple tutorial with many examples that uses the RANSAC Toolbox for MATLAB.
 * [25 Years of RANSAC Workshop](http://cmp.felk.cvut.cz/ransac-cvpr2006/)
 
-**八、后话**
+**九、后话**
 
     本文在翻译的过程中参考了沈乐君的文章《[随机抽样一致性算法RANSAC源程序和教程](http://www.shenlejun.cn/my/article/show.asp?id=43)》。Ziv Yaniv已经用C++实现了RANSAC，您可以[点击这里下载](http://www.shenlejun.cn/my/article/UploadPic/2009-6/2009628254132153.rar)源程序。
 
