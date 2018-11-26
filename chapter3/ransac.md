@@ -47,29 +47,29 @@ best\_model —— 跟数据最匹配的模型参数（如果没有找到好的�
 best\_consensus\_set —— 估计出模型的数据点  
 best\_error —— 跟数据相关的估计出的模型错误  
   
-iterations = 0  
-best\_model = null  
-best\_consensus\_set = null  
-best\_error = 无穷大  
-while \( iterations &lt; k \)  
-    maybe\_inliers = 从数据集中随机选择n个点  
-    maybe\_model = 适合于maybe\_inliers的模型参数  
-    consensus\_set = maybe\_inliers  
+`iterations = 0  
+best_model = null  
+best_consensus_set = null  
+best_error = 无穷大  
+while ( iterations < k )  
+    maybe_inliers = 从数据集中随机选择n个点  
+    maybe_model = 适合于maybe_inliers的模型参数  
+    consensus_set = maybe_inliers  
   
-    for \( 每个数据集中不属于maybe\_inliers的点 ）  
-        if \( 如果点适合于maybe\_model，且错误小于t ）  
-            将点添加到consensus\_set  
-    if （ consensus\_set中的元素数目大于d ）  
+    for ( 每个数据集中不属于maybe_inliers的点 ）  
+        if ( 如果点适合于maybe_model，且错误小于t ）  
+            将点添加到consensus_set  
+    if （ consensus_set中的元素数目大于d ）  
         已经找到了好的模型，现在测试该模型到底有多好  
-        better\_model = 适合于consensus\_set中所有点的模型参数  
-        this\_error = better\_model究竟如何适合这些点的度量  
-        if \( this\_error &lt; best\_error \)  
+        better_model = 适合于consensus_set中所有点的模型参数  
+        this_error = better_model究竟如何适合这些点的度量  
+        if ( this_error < best_error )  
             我们发现了比以前好的模型，保存该模型直到更好的模型出现  
-            best\_model =  better\_model  
-            best\_consensus\_set = consensus\_set  
-            best\_error =  this\_error  
+            best_model =  better_model  
+            best_consensus_set = consensus_set  
+            best_error =  this_error  
     增加迭代次数  
-返回 best\_model, best\_consensus\_set, best\_error  
+返回 best_model, best_consensus_set, best_error`  
   
     RANSAC算法的可能变化包括以下几种：  
     （1）如果发现了一种足够好的模型（该模型有足够小的错误率），则跳出主循环。这样可能会节约计算额外参数的时间。  
@@ -93,51 +93,9 @@ while \( iterations &lt; k \)
 **六、应用**  
     RANSAC算法经常用于计算机视觉，例如同时求解相关问题与估计立体摄像机的基础矩阵。
 
-  
-**七、参考文献**
 
-* Martin A. Fischler and Robert C. Bolles \(June 1981\). "Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography".
-  Comm. of the ACM
-  **24**
-  : 381–395.
-  [doi](http://en.wikipedia.org/wiki/Digital_object_identifier)
-  :
-  [10.1145/358669.358692](http://dx.doi.org/10.1145%2F358669.358692)
-  .
-* David A. Forsyth and Jean Ponce \(2003\).
-  Computer Vision, a modern approach
-  . Prentice Hall.
-  [ISBN](http://en.wikipedia.org/wiki/International_Standard_Book_Number)
-  [0-13-085198-1](http://en.wikipedia.org/wiki/Special:BookSources/0-13-085198-1)
-  .
-* Richard Hartley and
-  [Andrew Zisserman](http://en.wikipedia.org/wiki/Andrew_Zisserman)
-  \(2003\).
-  Multiple View Geometry in Computer Vision
-  \(2nd ed.\). Cambridge University Press.
-* P.H.S. Torr and D.W. Murray \(1997\). "The Development and Comparison of Robust Methods for Estimating the Fundamental Matrix".
-  International Journal of Computer Vision
-  **24**
-  : 271–300.
-  [doi](http://en.wikipedia.org/wiki/Digital_object_identifier)
-  :
-  [10.1023/A:1007927408552](http://dx.doi.org/10.1023%2FA%3A1007927408552)
-  .
-* Ondrej Chum \(2005\).
-  ["Two-View Geometry Estimation by Random Sample and Consensus"](http://cmp.felk.cvut.cz/~chum/Teze/Chum-PhD.pdf)
-  .
-  PhD Thesis
-  .
-  [http://cmp.felk.cvut.cz/~chum/Teze/Chum-PhD.pdf](http://cmp.felk.cvut.cz/~chum/Teze/Chum-PhD.pdf)
-* Sunglok Choi, Taemin Kim, and Wonpil Yu \(2009\).
-  ["Performance Evaluation of RANSAC Family"](http://www.bmva.org/bmvc/2009/Papers/Paper355/Paper355.pdf)
-  .
-  In Proceedings of the British Machine Vision Conference \(BMVC\)
-  .
-  [http://www.bmva.org/bmvc/2009/Papers/Paper355/Paper355.pdf](http://www.bmva.org/bmvc/2009/Papers/Paper355/Paper355.pdf)
-  .
 
-**八、外部链接**
+**七、外部链接**
 
 * [RANSAC Toolbox for MATLAB](http://vision.ece.ucsb.edu/~zuliani/Code/Code.html)
   . A research \(and didactic\) oriented toolbox to explore the RANSAC algorithm in
@@ -149,7 +107,7 @@ while \( iterations &lt; k \)
   A simple tutorial with many examples that uses the RANSAC Toolbox for MATLAB.
 * [25 Years of RANSAC Workshop](http://cmp.felk.cvut.cz/ransac-cvpr2006/)
 
-**九、后话**
+**八、后话**
 
     本文在翻译的过程中参考了沈乐君的文章《[随机抽样一致性算法RANSAC源程序和教程](http://www.shenlejun.cn/my/article/show.asp?id=43)》。Ziv Yaniv已经用C++实现了RANSAC，您可以[点击这里下载](http://www.shenlejun.cn/my/article/UploadPic/2009-6/2009628254132153.rar)源程序。
 
