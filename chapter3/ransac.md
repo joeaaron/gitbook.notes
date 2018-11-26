@@ -45,13 +45,13 @@ best\_model —— 跟数据最匹配的模型参数（如果没有找到好的�
 best\_consensus\_set —— 估计出模型的数据点  
 best\_error —— 跟数据相关的估计出的模型错误
 
-`iterations = 0  
-best_model = null  
-best_consensus_set = null  
-best_error = 无穷大  
-while ( iterations < k )  
-    maybe_inliers = 从数据集中随机选择n个点  
-    maybe_model = 适合于maybe_inliers的模型参数  
+`iterations = 0    
+best_model = null    
+best_consensus_set = null    
+best_error = 无穷大    
+while ( iterations < k )    
+    maybe_inliers = 从数据集中随机选择n个点    
+    maybe_model = 适合于maybe_inliers的模型参数    
     consensus_set = maybe_inliers`
 
 ```
@@ -67,7 +67,7 @@ if （ consensus_set中的元素数目大于d ）
         best_model =  better_model  
         best_consensus_set = consensus_set  
         best_error =  this_error  
-增加迭代次数  
+增加迭代次数
 ```
 
 `返回 best_model, best_consensus_set, best_error`
@@ -75,7 +75,7 @@ if （ consensus_set中的元素数目大于d ）
 ```
 RANSAC算法的可能变化包括以下几种：  
 （1）如果发现了一种足够好的模型（该模型有足够小的错误率），则跳出主循环。这样可能会节约计算额外参数的时间。  
-（2）直接从maybe\_model计算this\_error，而不从consensus\_set重新估计模型。这样可能会节约比较两种模型错误的时间，但可能会对噪声更敏感。  
+（2）直接从maybe\_model计算this\_error，而不从consensus\_set重新估计模型。这样可能会节约比较两种模型错误的时间，但可能会对噪声更敏感。
 ```
 
 **四、参数**  
