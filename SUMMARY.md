@@ -7,5 +7,5 @@
   * [3D Mapping with an RGB-D Camera（RGBD SLAM V2 ）](chapter2/3d-mapping-with-an-rgb-d-camerargbd-slam-v2.md)
 * [RGBD-SLAM](chapter3.md)
   * [icp](chapter3/icp.md)
-  * ransac
+  * [ransac](chapter3/ransac.md)
 
