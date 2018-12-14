@@ -45,13 +45,13 @@ best\_model —— 跟数据最匹配的模型参数（如果没有找到好的�
 best\_consensus\_set —— 估计出模型的数据点  
 best\_error —— 跟数据相关的估计出的模型错误
 
-`iterations = 0    
-best_model = null    
-best_consensus_set = null    
-best_error = 无穷大    
-while ( iterations < k )    
-    maybe_inliers = 从数据集中随机选择n个点    
-    maybe_model = 适合于maybe_inliers的模型参数    
+`iterations = 0      
+best_model = null      
+best_consensus_set = null      
+best_error = 无穷大      
+while ( iterations < k )      
+    maybe_inliers = 从数据集中随机选择n个点      
+    maybe_model = 适合于maybe_inliers的模型参数      
     consensus_set = maybe_inliers`
 
 ```
