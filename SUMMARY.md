@@ -10,4 +10,5 @@
   * [ransac](chapter3/ransac.md)
 * [ROS](chapter4.md)
 * [ML](chapter5.md)
+  * [K-means](chapter5/k-means.md)
 

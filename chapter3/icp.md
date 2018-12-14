@@ -12,7 +12,7 @@
 
 \(5\)计算U1与Q之间的均方根误差，如小于预设的极限值ε，则结束，否则，以点集U1替换U，重复上述步骤。
 
-# [ToughStoneX3D\_ICP/](https://github.com/ToughStoneX/3D_ICP)
+# 
 
 
 
