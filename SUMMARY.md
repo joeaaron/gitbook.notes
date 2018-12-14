@@ -13,5 +13,5 @@
     * [amcl](chapter4/navig/amcl.md)
     * [move\_base](chapter4/navig/movebase.md)
 * [ML](chapter5.md)
-  * [K-means](chapter5/k-means.md)
+  * [kd-tree](chapter5/kd-tree.md)
 
