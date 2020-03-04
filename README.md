@@ -1,4 +1,4 @@
 # Technology Notes
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Notes about different techs used in my life and work.
 
